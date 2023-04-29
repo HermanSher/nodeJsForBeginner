@@ -21,11 +21,20 @@
 //To include add module into index.js we need to use a function which is require
 
 //require("./add"); // require function loads the add module into index.js and also we don't have to specify fileName.js we can directly called by add
-const addFn = require("./add");
-console.log("Hello from index.js");
-const sum = addFn(2, 3);
-const sum2 = addFn(6, 4);
-const sum3 = addFn(10, 5);
-console.log(sum);
-console.log(sum2);
-console.log(sum3);
+// const addFn = require("./add");
+// console.log("Hello from index.js");
+// const sum = addFn(2, 3);
+// const sum2 = addFn(6, 4);
+// const sum3 = addFn(10, 5);
+// console.log(sum);
+// console.log(sum2);
+// console.log(sum3);
+
+//*************MODULE SCOPE**********************/
+//Each Module has its own scope
+require('./batman');
+require('./superman');
+
+//Module Scope Summary
+// Each loaded module in Node.js is wrapped with an IIFE that provides private scoping of code
+// IIFE allows you to repeat variable names without any cinflicts
